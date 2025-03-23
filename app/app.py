@@ -90,8 +90,11 @@ def process_motor_file(uploaded_file, saved):
 def open_browser(port):
     webbrowser.open_new(f"http://localhost:{port}/")
 
-
 if __name__ == '__main__':
+    
     port = 5000
-    open_browser(port)
-    app.run(host='0.0.0.0', port=port)
+    host = '0.0.0.0'
+
+    # open_browser(port)
+
+    app.run(host=host, port=port, debug=True)
