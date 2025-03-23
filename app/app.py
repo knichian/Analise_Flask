@@ -96,5 +96,12 @@ if __name__ == '__main__':
     host = '0.0.0.0'
 
     # open_browser(port)
+    
+    extra_files = [ f"./templates/{i}" for i in os.listdir("./templates") ] 
 
-    app.run(host=host, port=port, debug=True)
+    # print(extra_files)
+    
+    app.run(host=host, port=port, debug=True, extra_files=extra_files)
+
+    # flask run --debug --extra-files templates/base.html
+    # python app.py
